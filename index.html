@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StakMule | Autonomous Open-Source Field Robotics</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        obsidian: '#0a0a0c',
+                        carddark: '#121216',
+                        accentAmber: '#f59e0b',
+                        accentCyan: '#06b6d4',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .glow-amber { box-shadow: 0 0 40px -10px rgba(245, 158, 11, 0.25); }
+        .glow-cyan { box-shadow: 0 0 40px -10px rgba(6, 182, 212, 0.25); }
+        .glass-panel { background: rgba(18, 18, 22, 0.7); backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.08); }
+    </style>
+</head>
+<body class="bg-obsidian text-gray-100 font-sans antialiased selection:bg-accentAmber selection:text-obsidian">
+
+    <!-- Navigation Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 glass-panel border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-3 h-3 rounded-full bg-accentAmber animate-pulse"></div>
+                <span class="text-xl font-bold tracking-wider uppercase">StakMule <span class="text-accentAmber text-xs font-mono px-2 py-0.5 rounded border border-accentAmber/30 ml-2">M1 / J1</span></span>
+            </div>
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-gray-400">
+                <a href="#platform" class="hover:text-accentAmber transition-colors">Platform</a>
+                <a href="#specs" class="hover:text-accentAmber transition-colors">Hardware & Tech Deck</a>
+                <a href="#vlog" class="hover:text-accentAmber transition-colors">Autonomous Vlogging</a>
+                <a href="#github" class="hover:text-accentAmber transition-colors">GitHub</a>
+            </nav>
+            <a href="https://etsy.com" target="_blank" class="px-5 py-2.5 rounded-full bg-accentAmber text-obsidian font-semibold text-sm tracking-wide hover:bg-amber-400 transition-all shadow-lg shadow-amber-500/10">
+                Get Master Pack
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 md:pt-44 md:pb-32 overflow-hidden">
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(245,158,11,0.12),rgba(255,255,255,0))]"></div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="text-center max-w-3xl mx-auto">
+                <span class="inline-block px-3 py-1 mb-6 text-xs font-mono tracking-widest text-accentCyan uppercase bg-cyan-950/50 border border-cyan-800/30 rounded-full">
+                    Zero Solder • Zero Guesswork
+                </span>
+                <h1 class="text-4xl md:text-7xl font-bold tracking-tight mb-8 leading-tight">
+                    Your Trusted <span class="text-transparent bg-clip-text bg-gradient-to-r from-accentAmber to-amber-200">Field Companion</span>
+                </h1>
+                <p class="text-lg md:text-xl text-gray-400 mb-10 leading-relaxed">
+                    Heavy-duty all-terrain utility meets companion intelligence. Haul 10kg over rough terrain, map your property with 3D LiDAR, and record automated 4K field notes hands-free.
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="#platform" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-accentAmber text-obsidian font-bold text-base hover:bg-amber-400 transition-all glow-amber">
+                        Explore Specifications
+                    </a>
+                    <a href="https://github.com" target="_blank" class="w-full sm:w-auto px-8 py-4 rounded-xl glass-panel text-gray-200 font-semibold text-base hover:border-white/20 transition-all">
+                        View GitHub Repository
+                    </a>
+                </div>
+            </div>
+
+            <!-- Hero Spec Bar -->
+            <div class="mt-20 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto">
+                <div class="glass-panel p-6 rounded-2xl text-center">
+                    <div class="text-2xl md:text-3xl font-bold text-accentAmber mb-1 font-mono">600mm</div>
+                    <div class="text-xs text-gray-400 uppercase tracking-wider">M1 Spine Height</div>
+                </div>
+                <div class="glass-panel p-6 rounded-2xl text-center">
+                    <div class="text-2xl md:text-3xl font-bold text-accentCyan mb-1 font-mono">10kg+</div>
+                    <div class="text-xs text-gray-400 uppercase tracking-wider">Countersunk Payload</div>
+                </div>
+                <div class="glass-panel p-6 rounded-2xl text-center">
+                    <div class="text-2xl md:text-3xl font-bold text-accentAmber mb-1 font-mono">3D LiDAR</div>
+                    <div class="text-xs text-gray-400 uppercase tracking-wider">& OAK-D Pro Vision</div>
+                </div>
+                <div class="glass-panel p-6 rounded-2xl text-center">
+                    <div class="text-2xl md:text-3xl font-bold text-accentCyan mb-1 font-mono">48V Plug</div>
+                    <div class="text-xs text-gray-400 uppercase tracking-wider">Hot-Swap Battery</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Platform Selector Section -->
+    <section id="platform" class="py-24 bg-[#0d0d12]">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">The StakMule Ecosystem</h2>
+                <p class="text-gray-400 max-w-xl mx-auto">Choose your scale. Designed from the ground up for zero-bend ergonomic utility or nimble property scouting.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <!-- M1 Flagship -->
+                <div class="glass-panel p-8 rounded-3xl glow-amber border-accentAmber/30 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-accentAmber text-obsidian text-xs font-bold px-4 py-1.5 rounded-bl-xl font-mono">FLAGSHIP M1</div>
+                    <h3 class="text-2xl font-bold mb-2">StakMule (M1 Utility Edition)</h3>
+                    <p class="text-gray-400 text-sm mb-6">The ultimate weekend-errand powerhouse and heavy utility pack mule.</p>
+                    <ul class="space-y-3 mb-8 text-sm text-gray-300">
+                        <li class="flex items-center"><span class="w-2 h-2 rounded-full bg-accentAmber mr-3"></span> Spine Height: <strong>600mm (Zero-Bend Ergonomics)</strong></li>
+                        <li class="flex items-center"><span class="w-2 h-2 rounded-full bg-accentAmber mr-3"></span> Cargo Bay: Dual grocery bags or heavy tool vault (~10kg)</li>
+                        <li class="flex items-center"><span class="w-2 h-2 rounded-full bg-accentAmber mr-3"></span> Compute: Nvidia Jetson Orin NX + NVMe Vault</li>
+                    </ul>
+                    <a href="https://etsy.com" target="_blank" class="block w-full py-3 rounded-xl bg-accentAmber text-obsidian font-bold text-center hover:bg-amber-400 transition-colors">
+                        Get M1 Master Pack
+                    </a>
+                </div>
+
+                <!-- J1 Scout -->
+                <div class="glass-panel p-8 rounded-3xl border-white/10 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-accentCyan text-obsidian text-xs font-bold px-4 py-1.5 rounded-bl-xl font-mono">SCOUT J1</div>
+                    <h3 class="text-2xl font-bold mb-2">StakMule-Jr (J1 Scout Edition)</h3>
+                    <p class="text-gray-400 text-sm mb-6">Nimble, compact mid-sized companion for tighter spaces and rapid deployment.</p>
+                    <ul class="space-y-3 mb-8 text-sm text-gray-300">
+                        <li class="flex items-center"><span class="w-2 h-2 rounded-full bg-accentCyan mr-3"></span> Spine Height: <strong>450mm (Compact Footprint)</strong></li>
+                        <li class="flex items-center"><span class="w-2 h-2 rounded-full bg-accentCyan mr-3"></span> Cargo Bay: Single light utility pack & camera gear</li>
+                        <li class="flex items-center"><span class="w-2 h-2 rounded-full bg-accentCyan mr-3"></span> Same modular CAN-bus architecture & GORT face</li>
+                    </ul>
+                    <a href="https://etsy.com" target="_blank" class="block w-full py-3 rounded-xl glass-panel text-white font-bold text-center hover:border-white/30 transition-colors">
+                        Get J1 Master Pack
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bento Grid Tech Features -->
+    <section id="specs" class="py-24">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Engineered Without Compromise</h2>
+                <p class="text-gray-400 max-w-xl mx-auto">Every subsystem is built for reliability, modular expansion, and true offline independence.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Feature 1: GORT Face -->
+                <div class="glass-panel p-8 rounded-3xl md:col-span-2 flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs font-mono text-accentAmber uppercase tracking-widest">Expressive Persona</span>
+                        <h3 class="text-2xl font-bold mt-2 mb-4">The GORT Face & Vertical 360° Halo</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            Framed by an uninterrupted 360° LED status ring, StakMule's micro-OLED eye panel communicates mood and system status in real time. Warm amber breathing for active companion mode, cool blue pulse for standby, and sharp focus when tracking.
+                        </p>
+                    </div>
+                    <div class="mt-8 pt-6 border-t border-white/5 flex items-center justify-between text-xs font-mono text-gray-500">
+                        <span>IP65 WEATHERPROOFING</span>
+                        <span>ACOUSTIC SPEAKER MESH</span>
+                    </div>
+                </div>
+
+                <!-- Feature 2: Cervical Tech Deck -->
+                <div class="glass-panel p-8 rounded-3xl flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs font-mono text-accentCyan uppercase tracking-widest">Easy Access</span>
+                        <h3 class="text-xl font-bold mt-2 mb-3">Cervical Tech Deck</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            Housed on the upper spine behind the head. Features M.2 NVMe SSD bay, micro-SD slot, USB-C maintenance port, and a hardware privacy kill-switch.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Feature 3: LiDAR & Vision -->
+                <div class="glass-panel p-8 rounded-3xl flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs font-mono text-accentCyan uppercase tracking-widest">Perception</span>
+                        <h3 class="text-xl font-bold mt-2 mb-3">3D LiDAR & OAK-D Pro</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            Lighting-immune point cloud mapping combined with 4K depth vision for dynamic terrain adaptation and obstacle avoidance.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Feature 4: Autonomous Vlogging -->
+                <div class="glass-panel p-8 rounded-3xl md:col-span-2 flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs font-mono text-accentAmber uppercase tracking-widest">Field Documentation</span>
+                        <h3 class="text-2xl font-bold mt-2 mb-4">Autonomous Vlogging & Dual-Stream Recording</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            Trigger field notes and follow-cam vlogs with simple voice commands. StakMule records pristine 4K masters to the internal NVMe vault while simultaneously outputting lightweight 1080p/720p proxies for instant field streaming to YouTube and TikTok.
+                        </p>
+                    </div>
+                    <div class="mt-8 pt-6 border-t border-white/5 flex items-center justify-between text-xs font-mono text-gray-500">
+                        <span>VOICE TRIGGERED</span>
+                        <span>RTMP / WEBRTC READY</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/5 py-12 bg-obsidian">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between text-sm text-gray-500">
+            <div class="mb-4 md:mb-0">
+                &copy; 2026 StakMule Platform. Open Source Hardware Architecture.
+            </div>
+            <div class="flex space-x-6">
+                <a href="https://github.com" target="_blank" class="hover:text-accentAmber transition-colors">GitHub</a>
+                <a href="https://etsy.com" target="_blank" class="hover:text-accentAmber transition-colors">Etsy Store</a>
+                <a href="#platform" class="hover:text-accentAmber transition-colors">Back to Top</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
